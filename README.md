@@ -5,25 +5,41 @@ To develop a Django application to store and retrieve data from a database using
 
 ## Entity Relationship Diagram
 
-Include your ER diagram here
+![output](entitydiagram.png)
 
 ## DESIGN STEPS
 
 ### STEP 1:
+creating and collecting datas from customer using django
 
 ### STEP 2:
+implementation using python code.
 
 ### STEP 3:
 
-Write your own steps
+Pushing into github
 
 ## PROGRAM
+```
+from django.db import models
+from django.contrib import admin
+# Create your models here.
 
-Include your code here
+class Customer(models.Model):
+      customerid = models.CharField(max_length=10,primary_key=True)
+      customername = models.CharField(max_length=100)
+      age = models.IntegerField()
+      email = models.EmailField()
+      address=models.CharField(max_length=100)
+
+class CustomerAdmin(admin.ModelAdmin):
+    list_display = ('customerid','customername','age','email','address')   
+```
 
 ## OUTPUT
 
-Include the screenshot of your admin page.
+![output](yuvaraj.png)
 
 
 ## RESULT
+thus, the experiment was executed successfully..
